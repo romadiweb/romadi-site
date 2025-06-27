@@ -40,6 +40,9 @@ function AppContent() {
         <link rel="preload" as="image" href="/photos/blurry-gradient-green.svg" />
         <link rel="preload" as="image" href="/photos/Izstrade.png" />
         <link rel="preload" as="image" href="/photos/InternetaVeikali.png" />
+        <link rel="preload" as="image" href="/photos/dizains.png" />
+        <link rel="preload" as="image" href="/photos/FacebookAds.png" />
+        <link rel="preload" as="image" href="/photos/GoogleAds.png" />
       </Helmet>
       {isHome && <TopBanner onVisibilityChange={setBannerVisible} onClick={open} />}
       <Header offset={headerOffset} />

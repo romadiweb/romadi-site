@@ -1,4 +1,5 @@
-    import { FC, ReactNode } from "react";
+    import { motion } from "framer-motion";
+import { FC, ReactNode } from "react";
 
     interface IzmaksasCardProps {
     image: string;
@@ -9,7 +10,20 @@
 
     export const IzmaksasCard: FC<IzmaksasCardProps> = ({ image, title, description, price }) => {
     return (
-        <div className="rounded-xl shadow-md overflow-hidden bg-white transform transition-transform duration-300 hover:-translate-y-2">
+    <motion.div
+        className="rounded-xl shadow-md overflow-hidden bg-white transform hover:-translate-y-1 transition-transform duration-700 ease-in-out"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{
+            type: "spring",
+            stiffness: 50,
+            damping: 20,
+            duration: 1.0
+        }}
+    >
+
+
         <img
             src={image}
             alt={title}
@@ -20,7 +34,7 @@
             <p className="text-gray-600 text-sm mb-6">{description}</p>
             <span className="absolute bottom-4 left-6 font-bold text-lg">{price}</span>
         </div>
-        </div>
+        </motion.div>
     );
     };
 

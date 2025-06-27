@@ -40,7 +40,7 @@
             <ul className="space-y-3 text-gray-400">
                 <li className="flex justify-start lg:justify-end items-center gap-2">
                 <img src="/icons/mail-white.svg" className="w-5 h-5" alt="email" />
-                <a href="mailto:info@romadi.lv">info@romadi.lv</a>
+                <span>info@romadi.lv</span>
                 </li>
                 <li className="flex justify-start lg:justify-end items-center gap-2">
                 <img src="/icons/phone-white.svg" className="w-5 h-5" alt="phone" />

@@ -1,7 +1,7 @@
-    import { Clock, Mail, MapPin, Phone, PhoneCall, CheckCircle } from "lucide-react";
-    import { Helmet } from "react-helmet-async";
-    import PageLayout from "../components/page-components/PageLayout";
-    import { useForm, ValidationError } from "@formspree/react";
+    import { useForm } from "@formspree/react";
+import { CheckCircle, Clock, Mail, MapPin, Phone, PhoneCall } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import PageLayout from "../components/page-components/PageLayout";
 
     export default function Kontakti() {
     const [state, handleSubmit] = useForm("xeokpbwe");
@@ -90,12 +90,17 @@
                 onSubmit={(e) => {
                     e.preventDefault();
 
-                    const form = e.currentTarget;
-                    const name = form.name;
-                    const email = form.email;
-                    const phone = form.phone;
-                    const message = form.message;
-                    const budget = form.budget;
+            const form = e.currentTarget as HTMLFormElement;
+            const elements = form.elements as typeof form.elements & {
+            name: HTMLInputElement;
+            email: HTMLInputElement;
+            phone: HTMLInputElement;
+            message: HTMLTextAreaElement;
+            budget: HTMLSelectElement;
+            };
+
+            const { name, email, phone, message, budget } = elements;
+
 
                     // Validācija ar lokalizētiem ziņojumiem
                     name.setCustomValidity("");
