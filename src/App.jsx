@@ -2,12 +2,14 @@ import { lazy, Suspense, useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
+import { Helmet } from "react-helmet-async";
 import CookiesModal from "./components/CookiesModal";
 import { usePromoModal } from "./components/hooks/usePromoModal";
 import Footer from "./components/page-components/Footer";
 import Header from "./components/page-components/Header";
 import PromoModal from "./components/page-components/PromoModal";
 import TopBanner from "./components/page-components/TopBanner";
+
 
 import "./global.d.ts";
 
@@ -34,6 +36,11 @@ function AppContent() {
 
   return (
     <>
+      <Helmet>
+        <link rel="preload" as="image" href="/photos/blurry-gradient-green.svg" />
+        <link rel="preload" as="image" href="/photos/Izstrade.png" />
+        <link rel="preload" as="image" href="/photos/InternetaVeikali.png" />
+      </Helmet>
       {isHome && <TopBanner onVisibilityChange={setBannerVisible} onClick={open} />}
       <Header offset={headerOffset} />
       <PromoModal isOpen={isOpen} close={close} />
