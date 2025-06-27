@@ -56,6 +56,7 @@ const handleSubmit = (e: React.FormEvent) => {
                 type="text"
                 name="name"
                 placeholder="Vārds*"
+                autoComplete="name"
                 value={formData.name}
                 onChange={handleChange}
                 className="input input-bordered text-gray-600 w-full bg-white"
@@ -66,6 +67,7 @@ const handleSubmit = (e: React.FormEvent) => {
                 type="tel"
                 name="phone"
                 placeholder="Tālrunis*"
+                autoComplete="tel"
                 value={formData.phone}
                 onChange={handleChange}
                 className="input input-bordered w-full text-gray-600 bg-white"
@@ -76,32 +78,30 @@ const handleSubmit = (e: React.FormEvent) => {
                 type="email"
                 name="email"
                 placeholder="E-pasts*"
+                autoComplete="email"
                 value={formData.email}
                 onChange={handleChange}
                 className="input input-bordered w-full text-gray-600 bg-white"
                 required
             />
 
-<select
-    name="budget"
-    value={formData.budget}
-    onChange={handleChange}
-    className="select select-bordered w-ful text-gray-600 bg-white"
-    required
-    defaultValue=""
-    >
-    <option disabled value="" className="text-gray-400">
-        -- Izvēlies budžetu --
-    </option>
-    <option>Tavs piedāvājums</option>
-    <option>līdz 500 EUR</option>
-    <option>500 - 1000 EUR</option>
-    <option>1000 - 2000 EUR</option>
-    <option>2000 - 5000 EUR</option>
-    <option>5000 - 10000 EUR</option>
-</select>
-
-
+            <select
+                name="budget"
+                value={formData.budget}
+                onChange={handleChange}
+                className="select select-bordered w-full text-gray-600 bg-white"
+                required
+            >
+                <option disabled value="" className="text-gray-400">
+                    -- Izvēlies budžetu --
+                </option>
+                <option>Tavs piedāvājums</option>
+                <option>līdz 500 EUR</option>
+                <option>500 - 1000 EUR</option>
+                <option>1000 - 2000 EUR</option>
+                <option>2000 - 5000 EUR</option>
+                <option>5000 - 10000 EUR</option>
+            </select>
             <textarea
                 name="message"
                 placeholder="Ievadiet ziņu"

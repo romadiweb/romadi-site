@@ -1,10 +1,18 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { services } from "../data/services";
+
 
 export default function Services() {
     return (
         <section id="pakalpojumi" className="py-20 bg-white text-black">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+                className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+                initial={{ x: 80, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                >
                 <h2 className="text-3xl font-bold mb-12 text-center">Ko mēs piedāvājam?</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                     {services.map((s, i) => (
@@ -19,7 +27,7 @@ export default function Services() {
                         </Link>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

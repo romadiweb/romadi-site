@@ -1,14 +1,20 @@
+    import { motion } from "framer-motion";
     export default function CallToAction() {
     return (
         <section className="bg-white py-20 text-center border-t border-black">
-        <div
+        <motion.div
             className="inline-block px-4 sm:px-8 md:px-20 lg:px-32 xl:px-40 py-20 rounded-xl mx-auto"
             style={{
-            backgroundImage: 'url("/photos/blurry-gradient-green.svg")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+                backgroundImage: 'url("/photos/blurry-gradient-green.svg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
             }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
         >
+
             <p className="text-xs text-gray-400 mb-4">
                 Viegla komunikācija · Reāla interese · Uz rezultātu
             </p>
@@ -27,7 +33,7 @@
             <p className="text-xs text-gray-400 mb-4">
                 Neesi pārliecināts ar ko sākt? - Mēs palīdzēsim.
             </p>
-        </div>
+        </motion.div>
         </section>
     );
     }

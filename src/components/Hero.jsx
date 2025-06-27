@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import TechnologySlider from "./TechnologySlider";
+
 export default function Hero() {
 
     const handleScrollTo = (id) => {
@@ -7,14 +9,17 @@ export default function Hero() {
 
     return (
         <section
-  id="hero"
-  className="h-screen flex flex-col bg-[url('/photos/blurry-gradient-green.svg')] bg-cover"
->
-
-
+            id="hero"
+            className="h-screen flex flex-col bg-[url('/photos/blurry-gradient-green.svg')] bg-cover"
+        >
             <div className="flex-1 basis-[85%] flex items-center justify-center text-black font-sans">
-                <div className="w-full max-w-screen-xl mx-auto pt-5 px-6 flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-10">
-
+                <motion.div
+                    className="w-full max-w-screen-xl mx-auto pt-5 px-6 flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-10"
+                    initial={{ x: -400 }}
+                    whileInView={{ x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                >
                     {/* Teksts */}
                     <div className="max-w-2xl relative text-left mx-auto lg:mx-0 [@media(min-width:1612px)]:mt-12">
                         <h1 className="text-4xl pt-[60px] sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-[#FAF9F6]">
@@ -64,7 +69,7 @@ export default function Hero() {
                             alt="Romadi Logo"
                         />
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className="basis-[15%] bg-gray-100 flex items-center justify-center">
                 <TechnologySlider />

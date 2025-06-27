@@ -1,3 +1,4 @@
+import { Headphones, Server, Shield } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import IzmaksasCards, { IzmaksasCard } from "../../components/IzmaksasCards";
 import IzstradesApraksts from "../../components/IzstradesApraksts";
@@ -9,25 +10,27 @@ import Piedavajam from "../../components/Piedavajam";
 import ServiceHero from "../../components/ServiceHero";
 import { piedavajamContent } from "../../data/piedavajam";
 
+
 export default function Izstrade() {
 
     const piedavajumi = [
     {
-        icon: "/icons/security-black.svg",
+        icon: Shield,
         title: "Drošības uzturēšana",
         description: "Regulāra mājaslapas pārbaude un aizsardzība pret uzbrukumiem.",
     },
     {
-        icon: "/icons/support-black.svg",
+        icon: Headphones,
         title: "Tehniskais atbalsts",
         description: "Ātra palīdzība tehniskos jautājumos pēc izstrādes.",
     },
     {
-        icon: "/icons/host-black.svg",
+        icon: Server,
         title: "Hostings un monitorings",
         description: "Drošs hostings un uzraudzība, lai viss strādā vienmērīgi.",
     },
 ];
+
 
     return (
         <PageLayout>

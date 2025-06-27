@@ -22,26 +22,26 @@ export default function PromoModal({ isOpen, close }: { isOpen: boolean; close: 
             >
             <X size={20} />
             </button>
-            <h2 className="text-xl text-[#252525] font-bold mb-6 text-center">Īpašs piedāvājums!</h2>
+            <h2 className="text-2xl text-[#252525] font-bold mb-6 text-center">Īpašs piedāvājums!</h2>
         <div className="text-[#252525] text-base mb-8 space-y-5 text-left leading-relaxed">
-            <p className="text-center">
+            <p>
                 Ja vēlies uzsākt sadarbību ar Romadi, tad šis ir īstais brīdis.
             </p>
-            <p className="text-center">
+            <p>
                 Izmanto kodu <strong className="text-black bg-gray-100 px-2 py-1 rounded">ROMADI2025</strong> un saņem
                 <strong> -15% atlaidi </strong> visiem mūsu pamatpakalpojumiem līdz 31. augustam.
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-600 text-center">
                 Piedāvājums attiecas uz mājaslapu izstrādi, dizainu, SEO un reklāmas pakalpojumiem.
             </p>
         </div>
 
 
             <div className="flex items-center justify-center gap-2">
-            <div className="bg-gray-100 px-4 py-2 rounded font-mono text-gray-400">ROMADI2025</div>
+            <div className="bg-gray-100 px-6 py-2 rounded font-mono text-gray-400">ROMADI2025</div>
             <button
                 onClick={copyCode}
-                className="text-sm bg-[#252525] text-white px-3 py-1 rounded hover:bg-gray-800 cursor-pointer"
+                className="text-md bg-[#252525] text-white px-3 py-2 rounded hover:bg-gray-800 cursor-pointer"
             >
                 <Copy size={16} className="inline-block mr-1" /> Kopēt
             </button>
