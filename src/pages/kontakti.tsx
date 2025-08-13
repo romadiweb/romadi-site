@@ -1,4 +1,4 @@
-    import { useForm } from "@formspree/react";
+import { useForm } from "@formspree/react";
 import { CheckCircle, Clock, Mail, MapPin, Phone, PhoneCall } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import PageLayout from "../components/page-components/PageLayout";
@@ -25,7 +25,7 @@ import PageLayout from "../components/page-components/PageLayout";
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-            <p className="text-gray-600 mb-8 max-w-xl mt-20 ml-4">
+            <p className="text-gray-600 mb-8 max-w-xl mt-20 lg:mt-25 ml-4">
                 Vai tev ir jautājums, ideja vai vienkārši vēlies saprast, kā mēs varam palīdzēt? Mēs vienmēr esam atvērti sarunai. Izvēlies sev ērtāko saziņas veidu – mēs atbildēsim ātri un precīzi.
             </p>
 
@@ -66,18 +66,18 @@ import PageLayout from "../components/page-components/PageLayout";
             </div>
 
             <div className="">
-                <h2 className="text-lg font-semibold mb-2 ml-4">Par Romadi pieeju</h2>
+                <h2 className="text-lg font-semibold ml-4">Par Romadi pieeju</h2>
                 <p className="text-sm text-gray-600 max-w-md ml-4">
                 Mēs uzskatām, ka laba sadarbība sākas ar sapratni. Tāpēc katru projektu sākam ar sarunu, kurā izprotam tavas vajadzības un sniedzam godīgu ieteikumu. Bez uzspiešanas. Bez steigas.
                 </p>
             </div>
             </div>
 
-            <div className="bg-gray-100 rounded-xl p-8 mt-20">
+            <div className="bg-gray-100 rounded-xl p-8 mt-20 lg:mt-25">
             <h2 className="text-xl font-bold mb-6">Sazinies</h2>
 
             {state.succeeded ? (
-            <div className="flex flex-col items-center justify-center text-center bg-green-100 border border-green-300 text-green-800 px-6 py-8 rounded-xl space-y-4">
+            <div className="flex flex-col items-center justify-center text-center bg-green-100 border border-green-300 text-green-800 rounded-xl space-y-4">
                 <CheckCircle className="w-10 h-10 text-green-600" />
                 <h3 className="text-xl font-semibold">Ziņa veiksmīgi nosūtīta!</h3>
                 <p className="text-sm max-w-md">
@@ -218,11 +218,11 @@ import PageLayout from "../components/page-components/PageLayout";
         </div>
 
         {/* FAQ sadaļa */}
-        <div className="max-w-3xl mx-auto mt-20">
-            <h2 className="text-2xl font-bold mb-6 text-center">Biežāk uzdotie jautājumi</h2>
+        <div className="max-w-3xl mx-auto ">
+            <h2 className="text-2xl font-bold text-center pb-2">Biežāk uzdotie jautājumi</h2>
 
             <div className="space-y-4">
-            <div className="collapse collapse-arrow bg-base-100 border-base-300">
+            <div className="collapse collapse-arrow bg-white border-base-300">
                 <input type="checkbox" />
                 <div className="collapse-title text-md font-medium bg-gray-100">
                 Cik ātri varat uzsākt darbu pie projekta?
@@ -232,7 +232,7 @@ import PageLayout from "../components/page-components/PageLayout";
                 </div>
             </div>
 
-            <div className="collapse collapse-arrow bg-base-100">
+            <div className="collapse collapse-arrow bg-white">
                 <input type="checkbox" />
                 <div className="collapse-title text-md font-medium bg-gray-100">
                 Vai varu pasūtīt tikai dizainu vai tikai izstrādi?
@@ -242,7 +242,7 @@ import PageLayout from "../components/page-components/PageLayout";
                 </div>
             </div>
 
-            <div className="collapse collapse-arrow bg-base-100 ">
+            <div className="collapse collapse-arrow bg-white">
                 <input type="checkbox" />
                 <div className="collapse-title text-md font-medium bg-gray-100">
                 Vai piedāvājat arī uzturēšanu pēc mājaslapas izveides?

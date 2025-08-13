@@ -1,8 +1,1 @@
-pievienot svitrinu "-" vai kaut ko tadu svg pie sadalu virsrakstiem.
-
-Pârbaudît struktûru facebook, google reklamas sadaïai kâ arî padomât par attçliem tur no mediaguru.
-Iespejams nomainit peleko kvadratu uz gradientu.
-
-
-TAGAD: google reklamas page, chatgpt ir jau mediaguru parfrazets teksts, tas ir parak lidzigs vel
-tapec japarstrâdâ VEL
+telefona versija neradas hero sekcija, pagriez wide paradas un lidz refresh ari paliek vertikalo.

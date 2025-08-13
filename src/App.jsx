@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
@@ -12,6 +12,7 @@ import TopBanner from "./components/page-components/TopBanner";
 
 
 import "./global.d.ts";
+import Portfolio from "./pages/portfolio.tsx";
 
 // Lazy loaded pages
 const Home = lazy(() => import("./pages/Home"));
@@ -34,8 +35,20 @@ function AppContent() {
 
   const { isOpen, open, close } = usePromoModal();
 
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    // Triks, lai "restartētu" layout un fixed novietojumu
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+    }, 100);
+  }
+}, []);
+
+
+
   return (
     <>
+    
       <Helmet>
         <link rel="preload" as="image" href="/photos/blurry-gradient-green.svg" />
         <link rel="preload" as="image" href="/photos/Izstrade.png" />
@@ -43,15 +56,16 @@ function AppContent() {
         <link rel="preload" as="image" href="/photos/dizains.png" />
         <link rel="preload" as="image" href="/photos/FacebookAds.png" />
         <link rel="preload" as="image" href="/photos/GoogleAds.png" />
+        <link rel="preload" as="image" href="/photos/seo.png" />
       </Helmet>
-      {isHome && <TopBanner onVisibilityChange={setBannerVisible} onClick={open} />}
+      <TopBanner onVisibilityChange={setBannerVisible} onClick={open} />
       <Header offset={headerOffset} />
       <PromoModal isOpen={isOpen} close={close} />
 
-      <main className="min-h-screen bg-white">
+      <main className="min-h-[100svh] bg-white">
         <Suspense
           fallback={
-            <div className="min-h-[50vh] flex items-center justify-center bg-white">
+            <div className="min-h-[100svh] flex items-center justify-center bg-white">
               {/* Optional loader spinner here */}
             </div>
           }
@@ -67,6 +81,7 @@ function AppContent() {
             <Route path="/google-reklamas" element={<GoogleReklamas />} />
             <Route path="/facebook-reklamas" element={<FacebookReklamas />} />
             <Route path="/privatums" element={<Privatums />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

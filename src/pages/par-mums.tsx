@@ -9,13 +9,13 @@ export default function ParMums() {
                 <meta name="description" content="Romadi ir web izstrādes un digitālā attīstības komanda, kas strādā ar mērķi – radīt dizainiski un tehniski izcilus risinājumus uzņēmumiem Latvijā." />
                 <meta property="og:title" content="Par Mums – Mūsu pieeja, vērtības un komanda | ROMADI" />
                 <meta property="og:description" content="Iepazīsti Romadi komandu, mūsu pieredzi un vērtības. Mēs ticam individuālai pieejai un kvalitatīvam rezultātam." />
-                <meta property="og:image" content="https://romadi.lv/og/par-mums.jpg" />
+                <meta property="og:image" content="https://romadi.lv/og/par-mums.jpeg" />
                 <meta property="og:url" content="https://romadi.lv/par-mums" />
             </Helmet>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white">
             {/* Kreisā kolonna */}
             <div className="mt-20">
-            <h1 className="text-3xl sm:text-3xl font-bold mb-4 ml-4">Kas ir ROMADI?</h1>
+            <h1 className="text-3xl sm:text-3xl font-bold mb-4 ml-4 lg:mt-12">Kas ir ROMADI?</h1>
             <p className="text-gray-600 mb-6 max-w-xl ml-4">
                 ROMADI ir neliela, bet spēcīga digitālā komanda, kas apvieno dizainu, izstrādi un stratēģiju vienotā piedāvājumā. Mēs radām mājaslapas, kas izskatās labi, strādā perfekti un palīdz sasniegt reālus rezultātus.
             </p>
@@ -49,7 +49,7 @@ export default function ParMums() {
             {/* Labā kolonna - attēls */}
             <div className="flex items-center justify-center">
             <img
-                src="/photos/about-us-placeholder.jpg"
+                src="/photos/liepaja.jpg"
                 alt="Par mums"
                 className="rounded-xl shadow-md max-w-full h-auto"
             />
@@ -57,10 +57,10 @@ export default function ParMums() {
         </div>
 
         <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold mb-6 text-center">Biežāk uzdotie jautājumi</h2>
+        <h2 className="text-2xl font-bold text-center">Biežāk uzdotie jautājumi</h2>
 
-        <div className="space-y-4">
-        <div className="collapse collapse-arrow bg-base-100 border-base-300">
+        <div className="space-y-4 pt-4">
+        <div className="collapse collapse-arrow bg-white border-base-300">
             <input type="checkbox" />
             <div className="collapse-title text-md font-medium bg-gray-100">
                 Vai es varu sadarboties ar jums, ja vēl nezinu precīzi, ko man vajag?
@@ -90,7 +90,7 @@ export default function ParMums() {
                 </div>
             </div>
 
-            <div className="collapse collapse-arrow bg-base-100 ">
+            <div className="collapse collapse-arrow bg-white pb-2">
                 <input type="checkbox" />
                 <div className="collapse-title text-md font-medium bg-gray-100">
                 Vai ROMADI piedāvā ilgtermiņa sadarbību vai tikai vienreizējus projektus?

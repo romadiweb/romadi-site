@@ -148,7 +148,7 @@ export default function Header({ offset = 0 }: { offset?: number }) {
                                 </li>
                                 <li><a href="/par-mums">Par mums</a></li>
                                 <li><a href="/kontakti">Kontakti</a></li>
-                                <li><a>Portfolio</a></li>
+                                <li><a href="/portfolio">Portfolio</a></li>
                             </ul>
                         </div>
 
@@ -170,7 +170,21 @@ export default function Header({ offset = 0 }: { offset?: number }) {
 
             <div className={`fixed inset-0 z-[100] flex justify-end transition-opacity duration-300 ${drawerOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`} role="dialog" aria-modal="true">
                 <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[100]" onClick={() => setDrawerOpen(false)}></div>
-                <div className={`relative w-80 min-h-screen overflow-y-auto bg-white text-black text-lg font-medium transform transition-transform duration-300 z-[101] ${drawerOpen ? "translate-x-0" : "translate-x-full"}`}>
+                <div
+  className={`
+    relative
+    w-full sm:w-80
+    min-h-screen
+    overflow-y-auto
+    bg-white text-black text-lg font-medium
+    z-[101]
+    ${drawerOpen ? 'translate-x-0' : 'sm:translate-x-full'}
+    sm:transform
+    sm:transition-transform sm:duration-300
+  `}
+>
+
+
                     <button onClick={() => setDrawerOpen(false)} className="absolute top-4 right-4 btn btn-ghost z-50" aria-label="Aizvērt izvēlni">
                         <X className="w-6 h-6" />
                     </button>
