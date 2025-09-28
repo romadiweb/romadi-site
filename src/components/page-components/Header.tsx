@@ -205,7 +205,7 @@ export default function Header({ offset = 0 }: { offset?: number }) {
                         </li>
                         <li><a href="/par-mums" className="hover:text-gray-500">Par mums</a></li>
                         <li><a href="/kontakti" className="hover:text-gray-500">Kontakti</a></li>
-                        <li><a className="hover:text-gray-500">Portfolio</a></li>
+                        <li><a href="/portfolio" className="hover:text-gray-500">Portfolio</a></li>
 
                         <hr className="my-6 border-gray-300" />
 

@@ -25,7 +25,14 @@ export default function ParMums() {
                 <p className="text-sm text-gray-700 max-w-md ml-4">
                 Katra sadarbība sākas ar sarunu. Mēs ieklausāmies, uzdodam jautājumus un tikai tad piedāvājam risinājumus. Mums svarīgi, lai klientam viss ir saprotami, caurspīdīgi un ar vērtību.
                 </p>
-            </div>
+                <div className="mt-6 lg:hidden px-3">
+                    <img
+                        src="/photos/liepaja.jpg"
+                        alt="Par mums"
+                        className="rounded-xl shadow-md max-w-full h-auto"
+                    />
+                    </div>
+                </div>
 
             <div className="mb-8">
                 <h2 className="text-lg font-semibold mb-2 ml-4">Ko mēs darām</h2>
@@ -47,12 +54,12 @@ export default function ParMums() {
             </div>
 
             {/* Labā kolonna - attēls */}
-            <div className="flex items-center justify-center">
-            <img
-                src="/photos/liepaja.jpg"
-                alt="Par mums"
-                className="rounded-xl shadow-md max-w-full h-auto"
-            />
+            <div className="hidden lg:flex items-center justify-center px-4">
+                <img
+                    src="/photos/liepaja.jpg"
+                    alt="Par mums"
+                    className="rounded-xl shadow-md max-w-full h-auto"
+                />
             </div>
         </div>
 

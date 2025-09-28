@@ -57,6 +57,8 @@ useEffect(() => {
         <link rel="preload" as="image" href="/photos/FacebookAds.png" />
         <link rel="preload" as="image" href="/photos/GoogleAds.png" />
         <link rel="preload" as="image" href="/photos/seo.png" />
+        <link rel="preload" as="image" href="/photos/liepaja.jpg" />
+        <link rel="preload" as="image" href="/photos/phone-ui.png" />
       </Helmet>
       <TopBanner onVisibilityChange={setBannerVisible} onClick={open} />
       <Header offset={headerOffset} />

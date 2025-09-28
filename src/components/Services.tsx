@@ -6,7 +6,7 @@ export default function Services() {
     return (
         <section id="pakalpojumi" className="py-20 bg-white text-black">
                 <h2 className="text-3xl font-bold mb-12 text-center">Ko mēs piedāvājam?</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-8">
                     {services.map((s, i) => (
                         <Link
                             key={i}
