@@ -14,13 +14,14 @@ import PageLayout from "../components/page-components/PageLayout";
             name="description"
             content="Ieplāno bezmaksas konsultāciju ar Romadi – mājaslapu izstrāde, SEO, dizains un digitālie risinājumi. Atbildēsim ātri un draudzīgi!"
             />
-            <meta property="og:title" content="Sazinies ar mums | ROMADI" />
+            <meta property="og:title" content="Sazinies ar mums" />
             <meta
             property="og:description"
             content="Ieplāno bezmaksas konsultāciju ar Romadi – mājaslapu izstrāde, SEO, dizains un digitālie risinājumi."
             />
             <meta property="og:image" content="https://romadi.lv/og/kontakti.jpg" />
             <meta property="og:url" content="https://romadi.lv/kontakti" />
+            <link rel="canonical" href="https://romadi.lv/kontakti" />
         </Helmet>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
