@@ -15,7 +15,7 @@ import { PortfolioCard } from "../components/PortfolioCard";
     {
         id: "ljk",
         title: "ljk.lv",
-        href: "https://ljk-lv.netlify.app/",
+        href: "https://ljk.lv/",
         description:
         "Vietnes piekļūstamības risinājumi, kontrasta režīmi un UI uzlabojumi.",
         image: "/photos/ljk.svg",
