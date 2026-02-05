@@ -9,17 +9,29 @@ import { PortfolioCard } from "../components/PortfolioCard";
     description: string;
     image: string;
     status?: "Izstrādē" | "Publicēts" | "Drīzumā";
+    tone?: "dark" | "light";
     }
 
     const projects: Project[] = [
     {
         id: "ljk",
-        title: "ljk.lv",
+        title: "Liepājas Jūrniecības koledža",
         href: "https://ljk.lv/",
         description:
         "Vietnes piekļūstamības risinājumi, kontrasta režīmi un UI uzlabojumi.",
         image: "/photos/ljk.svg",
+        status: "Publicēts",
+        tone: "dark",
+    },
+    {
+        id: "diana",
+        title: "Medību veikals Diāna",
+        href: "diana-lv.netlify.app",
+        description:
+        "Treniņtestu platforma mednieku kursiem ar tematiskām sadaļām un pašpārbaudi.",
+        image: "/photos/diana-lv.jpg",
         status: "Izstrādē",
+        tone: "light",
     },
     ];
 

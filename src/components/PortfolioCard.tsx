@@ -8,14 +8,22 @@ export interface Project {
     description: string;
     image: string;          // ceļš uz attēlu
     status?: "Izstrādē" | "Publicēts" | "Drīzumā";
+    tone?: "dark" | "light";
     }
 
-    const StatusPill: React.FC<{ label: string }> = ({ label }) => (
-    <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
+    const StatusPill: React.FC<{ label: string; tone?: "dark" | "light" }> = ({ label, tone = "dark" }) => {
+    const toneClasses =
+        tone === "dark"
+        ? "bg-white/25 text-white ring-1 ring-white/30 shadow-sm"
+        : "bg-black/55 text-white ring-1 ring-white/20 shadow-sm";
+
+    return (
+        <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium backdrop-blur-sm ${toneClasses}`}>
         <Wrench className="size-3.5" aria-hidden="true" />
         {label}
-    </span>
+        </span>
     );
+    };
 
 export const PortfolioCard: React.FC<{ project: Project }> = ({ project }) => {
     const content = (
@@ -27,7 +35,7 @@ export const PortfolioCard: React.FC<{ project: Project }> = ({ project }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
         <div className="pointer-events-none absolute left-3 top-3 flex items-center gap-2">
-            {project.status ? <StatusPill label={project.status} /> : null}
+            {project.status ? <StatusPill label={project.status} tone={project.tone} /> : null}
         </div>
 
         <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
