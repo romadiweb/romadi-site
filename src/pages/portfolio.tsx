@@ -26,7 +26,7 @@ import { PortfolioCard } from "../components/PortfolioCard";
     {
         id: "diana",
         title: "Medību veikals Diāna",
-        href: "diana-lv.netlify.app",
+        href: "https://diana-lv.netlify.app",
         description:
         "Treniņtestu platforma mednieku kursiem ar tematiskām sadaļām un pašpārbaudi.",
         image: "/photos/diana-lv.jpg",
